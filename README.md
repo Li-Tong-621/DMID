@@ -26,7 +26,7 @@ python main_for_real.py
 ```
 python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_name --test_sigma test_noise_level --S_t Sampling_times --R_t Repetition_times
 ```
-*[注释：有时间整理完再上传]:- To reproduce the reported results, run
+*[^_^]:- To reproduce the reported results, run
 #### Real-world image denoising testing
 - To obtain denoised images, run
 ```
