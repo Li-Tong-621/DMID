@@ -520,7 +520,7 @@ elif args.objective=='DMID-p':
     R_t=1 #for DMID-p
 if args.objective!='none':
     for s_t in s_t_list:
-        for times in range(3):
+        for times in range(5):  # repeating 5 times to ensure repeatability.
 
             os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'times_'+str(times)           ,exist_ok=True)
             os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'times_'+str(times)+'/clean'  ,exist_ok=True)
