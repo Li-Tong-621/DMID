@@ -438,7 +438,8 @@ parser = argparse.ArgumentParser(description='Real-world Image Denoising using D
 parser.add_argument('--clean_path', default='./data/CC/GT/', type=str, help='for example: ./data/CC/clean/')
 parser.add_argument('--noisy_path', default='./data/CC/Noisy/', type=str, help='for example: ./data/CC/noisy/')
 parser.add_argument('--datatype', default='cc', type=str, help='cc/polyu/fmdd')
-parser.add_argument('--pertrianed', default='./pre-trained/cc-latent.pt', type=str, help='no for getting the embedding by yourself;others for directly searching for better results')
+# parser.add_argument('--pertrianed', default='./pre-trained/cc-latent.pt', type=str, help='no for getting the embedding by yourself;others for directly searching for better results')
+parser.add_argument('--pertrianed', default='./results/nn_cc/cc.pt', type=str, help='no for getting the embedding by yourself;others for directly searching for better results')
 parser.add_argument('--objective', default='DMID-p', type=str, help='objective,DMID-d/DMID-p/none')
 args = parser.parse_args()
 
