@@ -34,6 +34,15 @@ python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_na
 ```
 python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --objective objective
 ```
+
+- To quickly reproduce the reported results of CC, run
+```
+python main_for_real.py --clean_path './data/cc-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-p'
+```
+```
+python main_for_real.py --clean_path './data/cc-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-d'
+```
+
 ## Results
 #### Gaussian image denoising
 <img src = "./images/gaussian image denoising.png"> 
