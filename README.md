@@ -35,7 +35,9 @@ python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_pat
 ## Results
 #### Gaussian image denoising
 <img src = "./images/gaussian image denoising.png"> 
+
 #### Real-world image denoising
 <img src = "./images/real-world image denoising.png"> 
 
+#### Real-world image denoising
 
