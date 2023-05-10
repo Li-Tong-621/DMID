@@ -37,10 +37,10 @@ python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_pat
 
 - To quickly reproduce the reported results of CC, run
 ```
-python main_for_real.py --clean_path './data/cc-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-p'
+python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-p'
 ```
 ```
-python main_for_real.py --clean_path './data/cc-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-d'
+python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-d'
 ```
 
 ## Results
