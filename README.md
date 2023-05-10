@@ -10,6 +10,6 @@
 
 
 ## Quick Start
-"""
+```
 python main_for_gaussian.py
-"""
+```
