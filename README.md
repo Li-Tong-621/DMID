@@ -7,3 +7,9 @@
 
 ## Pipeline of DMID
 <img src = "./images/DMID.png"> 
+
+
+## Quick Start
+"""
+python main_for_gaussian.py
+"""
