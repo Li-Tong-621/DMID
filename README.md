@@ -6,7 +6,7 @@
 <hr />
 
 ## Pipeline of DMID
-<img src = "./images/DMID.png"> 
+<img src = "https://github.com/Li-Tong-621/DMID/tree/main/images/DMID.png"> 
 
 
 ## Quick Start
