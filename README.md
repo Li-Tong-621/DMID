@@ -39,5 +39,6 @@ python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_pat
 #### Real-world image denoising
 <img src = "./images/real-world image denoising.png"> 
 
-#### Real-world image denoising
+#### Classical Comparison
+<img src = "./images/classical comparison.png"> 
 
