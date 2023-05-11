@@ -41,4 +41,4 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/c
 
 ## Results
 
-results can be found in `./images/`.
+result tables can be found in `./images/`.
