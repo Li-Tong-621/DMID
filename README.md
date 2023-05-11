@@ -43,11 +43,12 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/c
 ```
 
 ## Results
+#### Real-world image denoising
+<img src = "./images/real-world image denoising.png"> 
+
 #### Gaussian image denoising
 <img src = "./images/gaussian image denoising.png"> 
 
-#### Real-world image denoising
-<img src = "./images/real-world image denoising.png"> 
 
 #### Classical Comparison
 <img src = "./images/classical comparison.png"> 
