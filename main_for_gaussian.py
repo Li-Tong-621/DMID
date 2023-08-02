@@ -48,13 +48,6 @@ def get_beta_schedule(beta_schedule, *, beta_start, beta_end, num_diffusion_time
     return betas
 
 
-def MeanUpsample(x, scale):
-    n, c, h, w = x.shape
-    out = torch.zeros(n, c, h, scale, w, scale).to(x.device) + x.view(n, c, h, 1, w, 1)
-    out = out.view(n, c, scale * h, scale * w)
-    return out
-
-
 class Train(object):
     def __init__(self, config):
         super().__init__()
