@@ -75,21 +75,7 @@ class Dataset(data.Dataset):
         if len(self.paths_clean)==0:
             self.paths_noise = glob.glob(path_noise + '/*.tif')
             self.paths_clean = glob.glob(path_clean + '/*.tif')
-        if opt =='CBSD68':
-            self.paths_noise = []
-            for i in range(15):
-                self.paths_noise.append(path_noise + '/0-{}.png'.format(i+1))
-            for i in range(53):
-                self.paths_noise.append(path_noise + '/{}.png'.format(i+1))
 
-            self.paths_clean=self.paths_noise
-        
-        if opt =='Kodak-list':
-            self.paths_noise = []
-            for i in range(24):
-                self.paths_noise.append(path_noise + '/{}.png'.format(i))
-            
-            self.paths_clean=self.paths_noise
 
         self.opt=opt
         if self.opt=='CelebA_HQ':
