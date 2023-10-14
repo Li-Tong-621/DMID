@@ -48,6 +48,13 @@ def get_beta_schedule(beta_schedule, *, beta_start, beta_end, num_diffusion_time
     return betas
 
 
+def MeanUpsample(x, scale):
+    n, c, h, w = x.shape
+    out = torch.zeros(n, c, h, scale, w, scale).to(x.device) + x.view(n, c, h, 1, w, 1)
+    out = out.view(n, c, scale * h, scale * w)
+    return out
+
+
 class Train(object):
     def __init__(self, config):
         super().__init__()
@@ -107,7 +114,7 @@ class Train(object):
         t = t*(difussion_times-1)
         t = torch.tensor(t,dtype=torch.int)
         a = (1 - self.betas).cumprod(dim=0).index_select(0, t).view(-1, 1, 1, 1)
-        x_cond = x_cond[:, :, :, :] * a.sqrt()
+        x_cond = x_cond[:, :, :, :] * a.sqrt() #eq.(3-11)
         #____________________________  end  ____________________________
 
         
@@ -254,7 +261,7 @@ parser = argparse.ArgumentParser(description='Gasussian Color Denoising using DM
 
 parser.add_argument('--data_path', default='./data/Imagenet', type=str, help='for example: ./data/Imagenet')
 parser.add_argument('--dataset', default='ImageNet', type=str, help='ImageNet/CBSD68/Kodak24/McMaster/...')
-parser.add_argument('--test_sigma', default=50, type=int, help='50/100/150/200/250/...')
+parser.add_argument('--test_sigma', default=250, type=int, help='50/100/150/200/250/...')
 parser.add_argument('--S_t', default=1, type=int, help='sampling times in one inference')
 parser.add_argument('--R_t', default=1, type=int, help='inference times')
 args = parser.parse_args()
@@ -272,6 +279,8 @@ N=d_t_list[ noise_sigma_list.index(args.test_sigma) ]
 os.makedirs('./results/'+option['data']['test_opt'],exist_ok=True)
 option['save']['photo_path']='./results/'+option['data']['test_opt']+'/'
 print(option)
+
+
 TRAIN=Train(config=option)
 TRAIN.eval_ddpm(eta=0.85,
                 eval_time=args.R_t,
