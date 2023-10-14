@@ -3,6 +3,7 @@ import glob
 import torchvision.transforms as transforms
 import PIL
 import torch
+from natsort import natsorted
 class CenterCropLongEdge(object):
     """Crops the given PIL Image on the long edge.
     Args:
@@ -49,7 +50,7 @@ def default_loader(path):
 class Dataset(data.Dataset):
     """
     # -----------------------------------------
-    # Get noise/clean for denosing
+    # Get noise/clean for Gaussion denosing
     # -----------------------------------------
     """
     def __init__(self,
@@ -75,9 +76,13 @@ class Dataset(data.Dataset):
         if len(self.paths_clean)==0:
             self.paths_noise = glob.glob(path_noise + '/*.tif')
             self.paths_clean = glob.glob(path_clean + '/*.tif')
-
-
+        
+        
+        self.paths_clean=natsorted(self.paths_clean)
+        self.paths_noise=natsorted(self.paths_noise)        
         self.opt=opt
+        
+        
         if self.opt=='CelebA_HQ':
             self.transform = transforms.Compose([transforms.Resize([self.patch_size, self.patch_size]),
                                                  transforms.ToTensor()])
@@ -95,7 +100,7 @@ class Dataset(data.Dataset):
         # ------------------------------------
         clean_path = self.paths_clean[index]
         noise_path = self.paths_noise[index]
-
+        # print(clean_path,noise_path)
         if self.noise_sigma==None:
             img_clean=PIL.Image.open(clean_path).convert('RGB')
             img_noise = PIL.Image.open(noise_path).convert('RGB')
@@ -123,7 +128,7 @@ if __name__ == "__main__":
 
 
     x=Dataset(n_channels=3,
-            H_size=64,  #测试时不起作用
+            H_size=64,  
             path_noise='./Noisy/',
             path_clean='./GT/',
             opt='test')
