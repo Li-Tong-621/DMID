@@ -29,13 +29,11 @@ python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_na
 
 
 #### Real-world image denoising testing
-*- To obtain denoised images, run
-
-*```
-
-*python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --S_t Sampling_times --R_t Repetition_times
-
-*```
+<!-- 这部分内容将被隐藏- To obtain denoised images, run
+```
+python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --S_t Sampling_times --R_t Repetition_times
+```
+-->
 
 - To quickly reproduce the reported results of CC, run
 ```
