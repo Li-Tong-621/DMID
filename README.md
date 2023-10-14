@@ -44,10 +44,10 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 ```
 
 ## Results
-#### Classical Comparison
+#### Classical Gaussion denoising
 <img src = "./Images/table1.png"> 
 
-#### Robust image denoising
+#### Robust Gaussion denoising
 <img src = "./Images/table2.png"> 
 
 #### Real-world image denoising
