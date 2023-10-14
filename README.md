@@ -31,15 +31,15 @@ python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_na
 #### Real-world image denoising testing
 - To obtain denoised images, run
 ```
-python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --objective objective
+python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --S_t Sampling_times --R_t Repetition_times
 ```
 
 - To quickly reproduce the reported results of CC, run
 ```
-python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-p'
+python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 1 --R_t 1
 ```
 ```
-python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/cc-full/Noisy/' --datatype 'cc' --pertrianed './pre-trained/cc-latent.pt' --objective 'DMID-d'
+python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 2 --R_t 500
 ```
 
 ## Results
