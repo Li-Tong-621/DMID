@@ -59,4 +59,4 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 #### Compared with other diffusion-based methods
 <img src = "./Images/table6.png"> 
 <img src = "./Images/fig13.png"> 
-<img src = "./Images/fig14.png" width=600> 
+<img src = "./Images/fig14.png" width=400> 
