@@ -6,7 +6,7 @@
 <hr />
 
 ## Pipeline of DMID
-<img src = "./images/fig3.jpg"> 
+<img src = "./Images/fig3.jpg"> 
 
 
 ## Quick Start
