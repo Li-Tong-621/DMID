@@ -46,12 +46,18 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 ## Results
 #### Classical Gaussion denoising
 <img src = "./Images/table1.png"> 
+<img src = "./Images/fig5.png"> 
 
 #### Robust Gaussion denoising
 <img src = "./Images/table2.png"> 
+<img src = "./Images/fig6.png"> 
 
 #### Real-world image denoising
 <img src = "./Images/table3.png"> 
+<img src = "./Images/fig7.png"> 
 
 #### Compared with other diffusion-based methods
 <img src = "./Images/table6.png"> 
+<img src = "./Images/fig13.png"> 
+
+
