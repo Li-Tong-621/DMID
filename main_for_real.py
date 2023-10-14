@@ -204,10 +204,10 @@ def eval_ddpm(eta=0.85,
 
 import argparse
 parser = argparse.ArgumentParser(description='Real-world Image Denoising using DMID')
-parser.add_argument('--clean_path', default='./data/CC/GT/', type=str, help='for example: ./data/CC/clean/')
-parser.add_argument('--noisy_path', default='./data/CC/Noisy/', type=str, help='for example: ./data/CC/noisy/')
-parser.add_argument('--datatype', default='cc', type=str, help='cc/polyu/fmdd')
-parser.add_argument('--pertrianed', default='./pre-trained/cc-latent.pt', type=str, help='None for getting the embedding by yourself;others for directly searching for better results')
+parser.add_argument('--clean_path', default='./data/CC-full/GT/', type=str, help='for example: ./data/CC/clean/')
+parser.add_argument('--noisy_path', default='./data/CC-full/Noisy/', type=str, help='for example: ./data/CC/noisy/')
+parser.add_argument('--datatype', default='CC', type=str, help='CC/PolyU/FMDD')
+parser.add_argument('--pertrianed', default='./pre-trained/CC.pt', type=str, help='None for getting the embedding by yourself;others for directly searching for better results')
 parser.add_argument('--S_t', default=1, type=int, help='sampling times in one inference')
 parser.add_argument('--R_t', default=1, type=int, help='repetition times of multiple inferences')
 args = parser.parse_args()
