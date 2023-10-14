@@ -44,5 +44,14 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 ```
 
 ## Results
+#### Classical Comparison
+<img src = "./Images/table1.png"> 
 
-result tables can be found in `./images/`.
+#### Robust image denoising
+<img src = "./Images/table2.png"> 
+
+#### Real-world image denoising
+<img src = "./Images/table3.png"> 
+
+#### Compared with diffusion-based methods
+<img src = "./Images/table6.png"> 
