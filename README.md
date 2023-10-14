@@ -54,9 +54,9 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 
 #### Real-world image denoising
 <img src = "./Images/table3.png"> 
-<img src = "./Images/fig7.png"> 
+<img src = "./Images/fig7.png" width=1000> 
 
 #### Compared with other diffusion-based methods
 <img src = "./Images/table6.png"> 
 <img src = "./Images/fig13.png"> 
-<img src = "./Images/fig14.png" width=500> 
+<!-- 这部分内容将被隐藏<img src = "./Images/fig14.png" width=500> -->
