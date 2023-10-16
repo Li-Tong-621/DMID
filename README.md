@@ -23,6 +23,7 @@ python main_for_real.py
 - Download the pre-trained Diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [guided-diffusion](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
 - Download testsets (CBSD68, Kodak24, McMaster, Urban100, ImageNet, CC, PolyU, FMDD).
 
+
 #### Gaussian image denoising testing
 - To obtain denoised images, run
 ```
@@ -31,19 +32,27 @@ python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_na
 
 
 #### Real-world image denoising testing
-<!-- 这部分内容将被隐藏- To obtain denoised images, run
+<!--- 
+- To obtain denoised images, run
 ```
 python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_path --datatype test_dataset_name --pertrianed latent_images_path --S_t Sampling_times --R_t Repetition_times
 ```
 -->
 
+
 - To quickly reproduce the reported results of CC, run
+```
+sh evluate.sh
+```
+
+<!--- 
 ```
 python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 1 --R_t 1
 ```
 ```
 python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 2 --R_t 500
 ```
+-->
 
 ## Results
 #### Classical Gaussion denoising
