@@ -40,12 +40,13 @@ python main_for_real.py --clean_path clean_data_path --noisy_path noisy_data_pat
 -->
 
 
-- To quickly reproduce the reported results of CC, run
+- To quickly reproduce the reported results, run
 ```
-sh evluate.sh
+sh evaluate.sh
 ```
 
-<!--- 
+<!---
+- To quickly reproduce the reported results of CC, run
 ```
 python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 1 --R_t 1
 ```
