@@ -13,9 +13,11 @@
 ```
 python main_for_gaussian.py
 ```
+<!--
 ```
 python main_for_real.py
-```
+``` 
+-->
 
 ## Evaluation
 - Download the pre-trained Diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [guided-diffusion](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
