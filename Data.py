@@ -83,10 +83,10 @@ class Dataset(data.Dataset):
         self.opt=opt
         
         
-        if self.opt=='CelebA_HQ':
+        if 'CelebA_HQ' in self.opt:
             self.transform = transforms.Compose([transforms.Resize([self.patch_size, self.patch_size]),
                                                  transforms.ToTensor()])
-        elif self.opt=='ImageNet':
+        elif 'ImageNet' in self.opt:
             self.transform = self.transform = transforms.Compose([CenterCropLongEdge(),
                                                                 transforms.Resize(self.patch_size),
                                                                 transforms.ToTensor()])
