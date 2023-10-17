@@ -24,14 +24,17 @@ python main_for_real.py
 - Download testsets (CBSD68, Kodak24, McMaster, Urban100, ImageNet, CC, PolyU, FMDD).
 
 
+<!--
 #### Gaussian image denoising testing
 - To obtain denoised images, run
 ```
 python main_for_gaussian.py --data_path your_data_path --dataset test_dataset_name --test_sigma test_noise_level --S_t Sampling_times --R_t Repetition_times
 ```
+-->
 
-
+<!--
 #### Real-world image denoising testing
+-->
 <!--- 
 - To obtain denoised images, run
 ```
