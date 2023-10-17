@@ -227,8 +227,8 @@ parser.add_argument('--S_t', default=1, type=int, help='sampling times in one in
 parser.add_argument('--R_t', default=1, type=int, help='repetition times of multiple inferences')
 args = parser.parse_args()
 
-N_list=[115,215,291,347,393]
-noise_sigma_list=[50,100,150,200,250]
+N_list=[33,57,115,215,291,347,393]
+noise_sigma_list=[15,25,50,100,150,200,250]
 
 option['data']['test_path_noise'] = args.data_path
 option['data']['test_path_clean'] = args.data_path
