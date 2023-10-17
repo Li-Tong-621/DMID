@@ -19,6 +19,34 @@ python main_for_gaussian.py --data_path './data/Urban100' --dataset 'Urban100' -
 python main_for_gaussian.py --data_path './data/Urban100' --dataset 'Urban100' --test_sigma 25 --S_t 1 --R_t 1
 python main_for_gaussian.py --data_path './data/Urban100' --dataset 'Urban100' --test_sigma 50 --S_t 1 --R_t 1
 
+#TABLE 2, Robust Gaussian image denoising:
+#DMID-d:
+#ImageNet
+python main_for_gaussian.py --data_path './data/ImageNet' --dataset 'ImageNet' --test_sigma 50 --S_t 1 --R_t 1
+python main_for_gaussian.py --data_path './data/ImageNet' --dataset 'ImageNet' --test_sigma 100 --S_t 1 --R_t 1
+python main_for_gaussian.py --data_path './data/ImageNet' --dataset 'ImageNet' --test_sigma 150 --S_t 1 --R_t 1
+python main_for_gaussian.py --data_path './data/ImageNet' --dataset 'ImageNet' --test_sigma 200 --S_t 1 --R_t 1
+python main_for_gaussian.py --data_path './data/ImageNet' --dataset 'ImageNet' --test_sigma 250 --S_t 1 --R_t 1
+#CBSD68
+python main_for_gaussian.py --data_path './data/CBSD68' --dataset 'CBSD68' --test_sigma 50 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/CBSD68' --dataset 'CBSD68' --test_sigma 100 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/CBSD68' --dataset 'CBSD68' --test_sigma 150 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/CBSD68' --dataset 'CBSD68' --test_sigma 200 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/CBSD68' --dataset 'CBSD68' --test_sigma 250 --S_t 2 --R_t 500
+#Kodak24
+python main_for_gaussian.py --data_path './data/Kodak24' --dataset 'Kodak24' --test_sigma 50 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/Kodak24' --dataset 'Kodak24' --test_sigma 100 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/Kodak24' --dataset 'Kodak24' --test_sigma 150 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/Kodak24' --dataset 'Kodak24' --test_sigma 200 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/Kodak24' --dataset 'Kodak24' --test_sigma 250 --S_t 2 --R_t 500
+#McMaster
+python main_for_gaussian.py --data_path './data/McMaster' --dataset 'McMaster' --test_sigma 50 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/McMaster' --dataset 'McMaster' --test_sigma 100 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/McMaster' --dataset 'McMaster' --test_sigma 150 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/McMaster' --dataset 'McMaster' --test_sigma 200 --S_t 2 --R_t 500
+python main_for_gaussian.py --data_path './data/McMaster' --dataset 'McMaster' --test_sigma 250 --S_t 1 --R_t 1
+
+#DMID-p:
 
 #TABLE 3, real-world image denoising:
 
