@@ -20,8 +20,10 @@ python main_for_real.py
 -->
 
 ## Evaluation
+
+- All the [visual results](https://github.com/Li-Tong-621/DMID/releases/tag/v1.0) are available.
 - Download the pre-trained unconditional diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [OpenAI](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
-- Download testsets (CBSD68, Kodak24, McMaster, Urban100, ImageNet, CC, PolyU, FMDD), and place the testsets in './data/'.
+- Download [testsets](https://github.com/Li-Tong-621/DMID/releases/tag/v1.0) (CBSD68, Kodak24, McMaster, Urban100, ImageNet, CC, PolyU, FMDD), and place the testsets in './data/', eg './data/CBSD68'.
 
 
 <!--
