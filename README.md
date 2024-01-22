@@ -22,9 +22,9 @@ python main_for_real.py
 ## Evaluation
 
 - All the [visual results](https://github.com/Li-Tong-621/DMID/releases/tag/v1.0) are available.
-- Download the pre-trained unconditional diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [OpenAI](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
 - Download [testsets](https://github.com/Li-Tong-621/DMID/releases/tag/v1.0) (CBSD68, Kodak24, McMaster, Urban100, ImageNet), and place the testsets in './data/', eg './data/CBSD68'.
 - Download the [testsets](https://github.com/Li-Tong-621/DMID/releases/tag/v1.0) after noise transformation (CC, PolyU, FMDD), and replace the folder named '.pre-trained' with the downloaded testsets.
+- Download the pre-trained unconditional diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [OpenAI](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
 
 <!--
 #### Gaussian image denoising testing
