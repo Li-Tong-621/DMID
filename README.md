@@ -105,18 +105,23 @@ python main_for_real_NT.py
 
 <img src = "./Images/table1.png"> 
 <img src = "./Images/fig5.png"> 
+</details>
 
+<details close>
 <summary><b>Robust Gaussion denoising</b></summary>
 
 <img src = "./Images/table2.png"> 
 <img src = "./Images/fig6.png"> 
+</details>
 
+<details close>
 <summary><b>Real-world image denoising</b></summary>
 
 <img src = "./Images/table3.png"> 
 <img src = "./Images/fig7.png" width=1000> 
+</details>
 
-
+<details close>
 <summary><b>Compared with other diffusion-based methods</b></summary>
 
 <img src = "./Images/table6.png"> 
