@@ -14,7 +14,7 @@
 ## ⏳ Todo lists
 
 - [x] We will supplement the code about noise transformation within a month (before 6.12). 
-- [] We may release our other methods ...
+- [ ] We may release our other methods ...
 
 ## Pipeline of DMID
 <img src = "./Images/fig3.png"> 
