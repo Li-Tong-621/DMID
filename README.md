@@ -90,7 +90,7 @@ python utils_cal_N.py
 python utils_cal_N_2.py
 ```
 
--  🔨 To perform our improved noise transformation by yourself:
+-  🔨 To perform our improved noise transformation method by yourself:
 
 ```
 python main_for_real_NT.py
