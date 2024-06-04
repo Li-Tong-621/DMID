@@ -16,14 +16,7 @@ import os
 import torch.nn.functional as F
 os.environ["CUDA_VISIBLE_DEVICES"] = '2'
 import random
-# seed = 2023
-seed = 2024
-torch.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
-np.random.seed(seed)
-random.seed(seed)
-torch.backends.cudnn.deterministic = True
-print('random seed',seed)
+
 
 def data_transform(X):
     return 2 * X - 1.0
@@ -262,6 +255,18 @@ args = parser.parse_args()
 
 N_list=[33,57,115,215,291,348,393]
 noise_sigma_list=[15,25,50,100,150,200,250]
+
+####DMID-p is prodeced under seed 2024( or may be 2023):
+# seed = 2023
+if args.S_t>3:
+    seed = 2024
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    print('random seed',seed)
+
 
 option['data']['test_path_noise'] = args.data_path
 option['data']['test_path_clean'] = args.data_path
