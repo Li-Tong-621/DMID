@@ -81,7 +81,7 @@ python main_for_real.py --clean_path './data/CC-full/GT/' --noisy_path './data/C
 
 ## Tools
 -  🔨 All the details of setting details of different tables can be found in the paper.
--  🔨 To calculate timestep N for a given noise level, we provied two version code, you can find them in ['./utils'](https://github.com/Li-Tong-621/DMID/utils)
+-  🔨 To calculate timestep N for a given noise level, we provied two version code, you can find them in [https://github.com/Li-Tong-621/DMID/utils](https://github.com/Li-Tong-621/DMID/tree/main/utils)
 
 ```
 python utils_cal_N.py
