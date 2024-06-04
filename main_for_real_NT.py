@@ -278,8 +278,6 @@ def denoising(noise_im,
     latent_dim = 3  
     #________________________________________________
     if datatype=='FMDD':
-        original_clean=clean_im
-        shape_c,h,w=np.shape(noise_im)
         
         noise_im=np.repeat(noise_im, 3, axis=0)
         clean_im=np.repeat(clean_im, 3, axis=0)
@@ -369,15 +367,9 @@ def denoising(noise_im,
             from skimage.metrics import peak_signal_noise_ratio as compare_psnr
             
             i0_til_np = torch_to_np(i0_til_torch).clip(0, 255)
-            if datatype=='FMDD':
-                psnr = compare_psnr(clean_im, i0_til_np, data_range=255)
-                ssim = compare_ssim(clean_im, i0_til_np, data_range=255)
-            else:
-                psnr = compare_psnr(clean_im.transpose(1, 2, 0), i0_til_np.transpose(1, 2, 0), data_range=255)
-                ssim = compare_ssim(clean_im.transpose(1, 2, 0), i0_til_np.transpose(1, 2, 0), multichannel=True, data_range=255)
-            # print(psnr,ssim)
+            
             i0_til_pil = np_to_pil(i0_til_np)
-            i0_til_pil.save(os.path.join(result_root, '{}'.format(i) + '.png'))
+            # i0_til_pil.save(os.path.join(result_root, '{}'.format(i) + '.png'))
             # print(f)
             print('Iteration: {:02d}, VAE Loss: {:f}, sure: {:f}'.format(i, 
                         total_loss.item(), 
