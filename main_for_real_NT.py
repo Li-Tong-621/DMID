@@ -278,10 +278,6 @@ def denoising(noise_im,
     latent_dim = 3  
     #________________________________________________
     if datatype=='FMDD':
-        
-        noise_im=np.repeat(noise_im, 3, axis=0)
-        clean_im=np.repeat(clean_im, 3, axis=0)
-        
         input_depth = 1
         latent_dim = 1
     #______________________________________________
