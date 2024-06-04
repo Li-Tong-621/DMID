@@ -1,4 +1,4 @@
-# Stimulating the Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling
+# Stimulating Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling
 
 <hr />
 
