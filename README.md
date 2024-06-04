@@ -7,6 +7,8 @@
 
 ## 🚀 News
 
+- The first version of the manuscript and the code were finished in 2023.5.
+
 - 2024.5.10 our paper has been accepted by TPAMI! :tada: 
 
 - 2024.6.4 the code and the tools are all released! :confetti_ball:
