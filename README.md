@@ -9,9 +9,9 @@
 
 - 2023.5 The first version of the manuscript and the code were finished.
 
-- 2024.5.10 our paper has been accepted by TPAMI! :tada: 
+- 2024.5.10 Our paper has been accepted by TPAMI! :tada: 
 
-- 2024.6.4 the code and the tools are all supplemented! :confetti_ball:
+- 2024.6.4 The code and the tools are all supplemented and released! :confetti_ball:
 
 ## ⏳ Todo lists
 
