@@ -15,7 +15,15 @@ from collections import OrderedDict
 import os
 import torch.nn.functional as F
 os.environ["CUDA_VISIBLE_DEVICES"] = '2'
-
+import random
+# seed = 2023
+seed = 2024
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+np.random.seed(seed)
+random.seed(seed)
+torch.backends.cudnn.deterministic = True
+print('random seed',seed)
 
 def data_transform(X):
     return 2 * X - 1.0
@@ -122,11 +130,24 @@ class Train(object):
         if last:
             xs = xs[0][-1]
         return xs
+    def MMSE(self,x,y,sigma):
+        tmp=-((y-x)**2)/2.0/sigma/sigma 
+        tmp= torch.exp(tmp)
+        likelihoods= tmp/ np.sqrt((2.0*np.pi*sigma))
+        # likelihoods
 
+        # print(likelihoods.shape,p.shape)
+        mseEst = torch.sum(likelihoods*x,dim=0,keepdim=True)[0,...] # Sum up over all samples
+        mseEst/= torch.sum(likelihoods,dim=0,keepdim=True)[0,...] # Normalize
+        
+        return mseEst
+        
     def eval_ddpm(self,
                   eta=0.8,
                   eval_time=1,
                   difussion_times=500,
+                  mmse_avrage=False,
+                  sigma=50
                   ):
         idx = 0
         with torch.no_grad():
@@ -144,20 +165,31 @@ class Train(object):
                 noise = F.pad(noise, (0,padw,0,padh), 'reflect')
                 clean = F.pad(clean, (0,padw,0,padh), 'reflect')
 
+                ######occupy gpu
+                if mmse_avrage:
+                    self.MMSE(clean,torch.unsqueeze(noise, dim=0).repeat(eval_time,1,1,1,1),sigma/255)
+                ######occupy gpu
+                
                 denoise = torch.zeros_like(clean).to('cpu')
-
                 denoise_list=[]
 
                 for i in range(eval_time):
-                    x = torch.randn(b, c, h, w, device=self.device)
                     denoise += self.sample_image(
                                                  x=data_transform(noise),
                                                  eta=eta,
                                                  difussion_times=difussion_times,
                                                  )
-
+                    if i == 0:
+                        denoise = torch.unsqueeze(temp_denoise, dim=0)
+                    else:
+                        temp_denoise = torch.unsqueeze(temp_denoise, dim=0)
+                        denoise = torch.cat([denoise,temp_denoise],dim=0)
                 denoise = data_transform_reverse(denoise / eval_time).to(self.device)
 
+                if mmse_avrage:
+                    denoise = self.MMSE(denoise,torch.unsqueeze(noise, dim=0).repeat(eval_time,1,1,1,1),sigma/255)
+                else:
+                    denoise = torch.mean(denoise,dim=0)
                 print('cost_time: ', time.time() - data_start)
 
                 noise = noise[:,:,:h,:w]
@@ -225,6 +257,7 @@ parser.add_argument('--dataset', default='McMaster', type=str, help='ImageNet/CB
 parser.add_argument('--test_sigma', default=250, type=int, help='50/100/150/200/250/...')
 parser.add_argument('--S_t', default=1, type=int, help='sampling times in one inference')
 parser.add_argument('--R_t', default=1, type=int, help='repetition times of multiple inferences')
+parser.add_argument('--mmse_avrage', default=False, help='mmse_average is better for perceptual quality')
 args = parser.parse_args()
 
 N_list=[33,57,115,215,291,347,393]
@@ -247,6 +280,8 @@ print(option)
 TRAIN.eval_ddpm(
                 eval_time=args.R_t,
                 difussion_times=N,
+                sigma=args.test_sigma
+                mmse_avrage=args.mmse_avrage,
                 )
 
 
