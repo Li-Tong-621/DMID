@@ -9,12 +9,12 @@
 
 - 2024.5.10 our paper has been accepted by TPAMI! :tada: 
 
-- 2024.6.4 the code and the tools are all released! 🚀
+- 2024.6.4 the code and the tools are all released! :confetti_ball:
 
 ## ⏳ Todo lists
 
 - [x] We will supplement the code about noise transformation within a month (before 6.12). 
-- [] We may release our other methods :confetti_ball: ...
+- [] We may release our other methods ...
 
 ## Pipeline of DMID
 <img src = "./Images/fig3.png"> 
