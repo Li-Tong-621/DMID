@@ -260,7 +260,7 @@ parser.add_argument('--R_t', default=1, type=int, help='repetition times of mult
 parser.add_argument('--mmse_avrage', default=False, help='mmse_average is better for perceptual quality')
 args = parser.parse_args()
 
-N_list=[33,57,115,215,291,347,393]
+N_list=[33,57,115,215,291,348,393]
 noise_sigma_list=[15,25,50,100,150,200,250]
 
 option['data']['test_path_noise'] = args.data_path
