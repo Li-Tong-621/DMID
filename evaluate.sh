@@ -22,15 +22,15 @@ python main_for_gaussian.py --data_path './data/Urban100' --dataset 'Urban100' -
 #TABLE 3, real-world image denoising:
 
 #cc-d
-python main_for_real.py --clean_path '' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 2 --R_t 500
+python main_for_real.py --clean_path './data/CC/GT' --noisy_path './pre-trained/CC.pt' --datatype 'CC' --S_t 2 --R_t 500
 #cc-p:
-python main_for_real.py --clean_path '' --noisy_path './data/CC-full/Noisy/' --datatype 'CC' --pertrianed './pre-trained/CC.pt' --S_t 1 --R_t 1
+python main_for_real.py --clean_path './data/CC/GT' --noisy_path './pre-trained/CC.pt' --datatype 'CC' --S_t 1 --R_t 1
 #polyu-d
-python main_for_real.py --clean_path '' --noisy_path '' --datatype 'PolyU' --pertrianed './pre-trained/PolyU.pt' --S_t 3 --R_t 333
+python main_for_real.py --clean_path './data/PolyU/GT' --noisy_path './pre-trained/PolyU.pt' --datatype 'PolyU' --S_t 3 --R_t 333
 #polyu-p:
-python main_for_real.py --clean_path '' --noisy_path '' --datatype 'PolyU' --pertrianed './pre-trained/PolyU.pt' --S_t 1 --R_t 1
+python main_for_real.py --clean_path './data/PolyU/GT' --noisy_path './pre-trained/PolyU.pt' --datatype 'PolyU' --S_t 1 --R_t 1
 #fmdd-d
-python main_for_real.py --clean_path '' --noisy_path '' --datatype 'FMDD' --pertrianed './pre-trained/FMDD.pt' --S_t 3 --R_t 333
+python main_for_real.py --clean_path './data/FMDD/GT' --noisy_path './pre-trained/FMDD.pt' --datatype 'FMDD' --S_t 3 --R_t 333
 #fmdd-p:
-python main_for_real.py --clean_path '' --noisy_path '' --datatype 'FMDD' --pertrianed './pre-trained/FMDD.pt' --S_t 2 --R_t 1
+python main_for_real.py --clean_path './data/FMDD/GT' --noisy_path './pre-trained/FMDD.pt' --datatype 'FMDD' --S_t 2 --R_t 1
 
