@@ -92,10 +92,11 @@ python utils_cal_N.py
 python utils_cal_N_2.py
 ```
 
--  🔨 To perform our improved noise transformation method by yourself:
+-  🔨 To perform our improved noise transformation method by yourself, or denoised any give noisy image, please firstly perform noise transformation and then denoise the intermediate image:
 
 ```
 python main_for_real_NT.py
+python main_for_real.py
 ```
 
 -  🔨 We provide a new code for real-world image denoising (main_for_real.py), because there are some errors, which i didn't find, in original code for real-world image denoising (main_for_real_o.py).
