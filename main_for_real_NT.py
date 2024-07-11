@@ -456,21 +456,21 @@ if args.pertrianed==None:
         save_idx+=1 
     print('noise transformation has finished!')
 
-###############################################################################
-#2：real-world denoising
-###############################################################################
-s_t=args.S_t
-R_t=args.R_t
-os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)           ,exist_ok=True)
-os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/clean'  ,exist_ok=True)
-os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/denoise',exist_ok=True)
-print('sample: '+str(s_t))
-eval_ddpm(eta=0.85,
-            eval_time=R_t,
-            difussion_times=0,
-            sample_times=s_t,
-            datatype=datatype,
-            cleanpath=args.clean_path,
-            savepth='./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/',
-            latent_path=args.pertrianed
-            )
+# ###############################################################################
+# #2：real-world denoising. We recomand to run main_for_real.py, as the following denising code may exist errors.
+# ###############################################################################
+# s_t=args.S_t
+# R_t=args.R_t
+# os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)           ,exist_ok=True)
+# os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/clean'  ,exist_ok=True)
+# os.makedirs('./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/denoise',exist_ok=True)
+# print('sample: '+str(s_t))
+# eval_ddpm(eta=0.85,
+#             eval_time=R_t,
+#             difussion_times=0,
+#             sample_times=s_t,
+#             datatype=datatype,
+#             cleanpath=args.clean_path,
+#             savepth='./results/'+'real-world/'+datatype+'/'+'/s'+str(s_t)+'/',
+#             latent_path=args.pertrianed
+#             )
