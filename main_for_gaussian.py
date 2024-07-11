@@ -167,7 +167,7 @@ class Train(object):
                 denoise_list=[]
 
                 for i in range(eval_time):
-                    denoise += self.sample_image(
+                    temp_denoise += self.sample_image(
                                                  x=data_transform(noise),
                                                  eta=eta,
                                                  difussion_times=difussion_times,
@@ -285,7 +285,7 @@ print(option)
 TRAIN.eval_ddpm(
                 eval_time=args.R_t,
                 difussion_times=N,
-                sigma=args.test_sigma
+                sigma=args.test_sigma,
                 mmse_avrage=args.mmse_avrage,
                 )
 
