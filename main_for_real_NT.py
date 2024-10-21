@@ -422,11 +422,11 @@ if args.pertrianed=='None':
         name= -4
         data_dct=CC_dict
         
-    LR = 1e-2
-    rho = 1
-    eta = 0.5
-    total_step = 50
-    prob1_iter = 500
+    LR = data_dct['LR']
+    rho = data_dct['rho']
+    eta = data_dct['eta']
+    total_step = data_dct['total_step']
+    prob1_iter = data_dct['prob1_iter']
     sigma=data_dct['sigma']
     
     save_hidden={}
