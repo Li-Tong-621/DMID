@@ -388,7 +388,7 @@ parser = argparse.ArgumentParser(description='Real-world Image Denoising using D
 parser.add_argument('--clean_path', default='./data/CC/GT/', type=str, help='for example: ./data/CC/clean/')
 parser.add_argument('--noisy_path', default='./data/CC/Noisy/', type=str, help='for example: ./data/CC/noisy/')
 parser.add_argument('--datatype', default='CC', type=str, help='CC/PolyU/FMDD')
-parser.add_argument('--pertrianed', default=None, type=str, help='None for getting the embedding by yourself;others for directly searching for better results')
+parser.add_argument('--pertrianed', default='None', type=str, help='None for getting the embedding by yourself;others for directly searching for better results')
 parser.add_argument('--S_t', default=1, type=int, help='sampling times in one inference')
 parser.add_argument('--R_t', default=1, type=int, help='repetition times of multiple inferences')
 args = parser.parse_args()
@@ -398,7 +398,7 @@ datatype=args.datatype
 #1.noise transformation
 ###############################################################################
 
-if args.pertrianed==None:
+if args.pertrianed=='None':
     if datatype=='CC':
         noises = natsorted(glob.glob(args.noisy_path + '*.png'))
         cleans = natsorted(glob.glob(args.clean_path + '*.png'))
