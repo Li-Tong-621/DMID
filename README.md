@@ -7,16 +7,20 @@
 
 ## 🚀 News
 
-- 2023.5 The first version of the manuscript and the code were finished.
+- 2023.5 The first version of the manuscript and the code were finished. :star:
 
 - 2024.5.10 Our paper has been accepted by TPAMI! :tada: 
 
 - 2024.6.4 The code and the tools are all supplemented and released! :confetti_ball:
 
+- 2024.11.2 The detailed steps and tips for testing with other datasets are provided! :heartpulse:
+
 ## ⏳ Todo lists
 
 - [x] We will supplement the code about noise transformation within a month (before 6.12). 
 - [ ] We may release our other methods ...
+- [ ] We may release more results of commonly used datasets ...
+- [ ] We may release our reproduced methods, for example R2R, ZS-N2N ...
 
 ## Pipeline of DMID
 <img src = "./Images/fig3.png"> 
