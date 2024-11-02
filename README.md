@@ -92,12 +92,21 @@ python utils_cal_N.py
 python utils_cal_N_2.py
 ```
 
--  🔨 To perform our improved noise transformation method by yourself, or denoised any give noisy image, please firstly perform noise transformation and then denoise the intermediate image:
+-  🔨 To perform our improved noise transformation method by yourself, or denoised any give noisy image, please firstly perform noise transformation and then denoise the intermediate image. 
 
 ```
 python main_for_real_NT.py
 python main_for_real.py
 ```
+
+-  The detailed tips are as follows:
+
+-  -  1: Note that in `python main_for_real_NT.py`, we need to set some parameters, such as the noise level parameter `sigma` related to the noise level of the images (line 430: `sigma=data_dct['sigma']`), and the parameter `eps` for determining the stopping condition (line 445: `eps=data_dct['eps']`).
+
+-  -  2: Running `python main_for_real_NT.py` successfully will generate a `.pt` file, after which we can run the `main_for_real.py` file. When running `main_for_real.py`, we need to find an appropriate step like line 155: `diffusion_times = find_N(sigma=2 * noises[str(index)]['noise_level'] / 255)`.
+
+-  -  3: In general, choosing appropriate parameters can yield very good results. For easier operation or comparison, feel free to make some changes, for example, use a fixed stopping condition, such as running 4500 or 5000 iterations fixed for each image.
+
 
 -  🔨 We provide a new code for real-world image denoising (main_for_real.py), because there are some errors, which i didn't find, in original code for real-world image denoising (main_for_real_o.py).
 
