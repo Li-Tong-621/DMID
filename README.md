@@ -1,4 +1,6 @@
 # Stimulating Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling
+[![arXiv](https://img.shields.io/badge/arxiv-paper-FF0000)](https://arxiv.org/abs/2307.03992)
+[![TPAMI](https://img.shields.io/badge/TPAMI-paper-179bd3)](https://ieeexplore.ieee.org/document/10607932)
 
 <hr />
 
@@ -14,6 +16,10 @@
 - 2024.6.4 The code and the tools are all supplemented and released! :confetti_ball:
 
 - 2024.11.2 The detailed steps and tips for testing with other datasets are provided! :heartpulse:
+
+- 2024.11.8 The citation imformation is updated. :rose:
+
+If you find this repo useful, please give it a star ⭐ and consider citing our paper in your research. Thank you.
 
 ## ⏳ Todo lists
 
@@ -145,3 +151,17 @@ python main_for_real.py
 <!-- 这部分内容将被隐藏<img src = "./Images/fig14.png" width=500> -->
 
 </details>
+
+
+
+## Citation
+
+```
+@inproceedings{DMID,
+	title={Stimulating the Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling},
+	author={Li, Tong and Feng, Hansen and Wang, Lizhi and Xiong, Zhiwei and Huang, Hua},
+	booktitle={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+	pages={8240-8257},
+	year={2024},
+}
+```
