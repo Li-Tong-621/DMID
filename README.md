@@ -35,7 +35,7 @@ If you find this repo useful, please give it a star ⭐ and consider citing our 
 ## Quick Start
 - Download the pre-trained unconditional diffusion [model](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)(from [OpenAI](https://github.com/openai/guided-diffusion)) and place it in `./pre-trained/`.
 
-- Tp quick start, just run:
+- To quick start, just run:
 
 ```
 python main_for_gaussian.py
