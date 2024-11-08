@@ -9,7 +9,7 @@
 
 ## 🚀 News
 
-- 2023.5 The first version of the manuscript waw submitted and the code were uploaded. :star:
+- 2023.5 The first version of the manuscript waw submitted and the code was uploaded. :star:
 
 - 2024.5.10 Our paper has been accepted by TPAMI! :tada: 
 
