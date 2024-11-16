@@ -245,7 +245,7 @@ option = {
 import argparse
 parser = argparse.ArgumentParser(description='Gasussian Color Denoising using DMID')
 
-parser.add_argument('--data_path', default='/data/litong/litong/Dataset/denoise_data/benchmark/McMaster', type=str, help='for example: ./data/Imagenet')
+parser.add_argument('--data_path', default='./data/McMaster', type=str, help='for example: ./data/Imagenet')
 parser.add_argument('--dataset', default='McMaster', type=str, help='ImageNet/CBSD68/Kodak24/McMaster/...')
 parser.add_argument('--test_sigma', default=250, type=int, help='50/100/150/200/250/...')
 parser.add_argument('--S_t', default=1, type=int, help='sampling times in one inference')
