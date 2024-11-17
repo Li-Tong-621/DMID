@@ -177,7 +177,8 @@ class Train(object):
                     else:
                         temp_denoise = torch.unsqueeze(temp_denoise, dim=0)
                         denoise = torch.cat([denoise,temp_denoise],dim=0)
-                denoise = data_transform_reverse(denoise / eval_time).to(self.device)
+                #denoise = data_transform_reverse(denoise / eval_time).to(self.device)
+                denoise = data_transform_reverse(denoise).to(self.device)
 
                 if mmse_avrage:
                     denoise = self.MMSE(denoise,torch.unsqueeze(noise, dim=0).repeat(eval_time,1,1,1,1),sigma/255)
