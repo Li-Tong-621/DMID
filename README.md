@@ -55,6 +55,10 @@
 
 - 2024.11.8 The citation imformation is updated. :rose:
 
+- 2024.11.16 Fix some minor issues, making the code more beginner-friendly. :sun_with_face:
+
+- 2024.11.23 Release a comparison-friendly version: DMID-4500. :rainbow:
+
 If you find this repo useful, please give it a star ⭐ and consider citing our paper in your research. Thank you.
 
 ## ⏳ Todo lists
@@ -188,6 +192,13 @@ python main_for_real.py
 
 </details>
 
+## Additional Results
+Some researchers have inquired about the results of the SIDD dataset. We briefly degrad the noise transformation in the embedding method to a fixed 4500 iterations and remove the ensembling method. The results are referred to DMID-4500:
+
+| Method | SIDD validation | SIDD benchmark | CC | FMDD |
+|----------|----------|----------|----------|----------|
+|          | PSNR / SSIM / LPIPS | PSNR / SSIM / LPIPS | PSNR / SSIM / LPIPS | PSNR / SSIM / LPIPS |
+| DMID-4500| 33.41 / 0.9130  / 0.343  | 34.21 / 0.8482 / - | 35.70 / 0.9811  / 0.139   | 31.68 / 0.8298  / 0.421 |
 
 
 ## Citation
