@@ -55,7 +55,7 @@
 
 - 2024.11.8 The citation imformation is updated. :rose:
 
-- 2024.11.16 Fix some minor issues, making the code more beginner-friendly. :sun_with_face:
+- 2024.11.16 Fix some minor problems, making the code more beginner-friendly. :sun_with_face:
 
 - 2024.11.23 Release a comparison-friendly version: DMID-4500. :rainbow:
 
