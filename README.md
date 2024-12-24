@@ -157,8 +157,11 @@ python main_for_real.py
 
 -  -  3: In general, choosing appropriate parameters can yield very good results. For easier operation or comparison, feel free to make some changes, for example, use a fixed stopping condition, such as running 4500 or 5000 iterations fixed for each image.
 
-
 -  🔨 We provide a new code for real-world image denoising (main_for_real.py), because there are some errors, which i didn't find, in original code for real-world image denoising (main_for_real_o.py).
+
+-  🔨 What if the denoised images you have are not natural images?
+-  -  1: You can first try to denoise directly with the current model. We also used non-natural image datasets in our paper, for example, the FMDD dataset, which is actually a dataset of fluorescent cell images. We treated the FMDD dataset as single-channel grayscale natural images, and you can refer to the code for specific operations.
+-  -  2: You can also train a diffusion model with your own dataset. We used a model trained by OpenAI on ImageNet, and you can use OpenAI's code to train a generative model for polarized images. Some potential issues you might encounter can be found in the issues https://github.com/Li-Tong-621/DMID/issues/9 and https://github.com/Li-Tong-621/DMID/issues/10.
 
 
 ## Results
