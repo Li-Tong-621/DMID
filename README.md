@@ -1,7 +1,7 @@
 # Stimulating Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling
 [![arXiv](https://img.shields.io/badge/arxiv-paper-FF0000)](https://arxiv.org/abs/2307.03992)
 [![TPAMI](https://img.shields.io/badge/TPAMI-paper-179bd3)](https://ieeexplore.ieee.org/document/10607932)
-
+[![知乎](https://img.shields.io/badge/知乎-讨论-0077CC)](https://zhuanlan.zhihu.com/p/1898420817429262557)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stimulating-the-diffusion-model-for-image/color-image-denoising-on-mcmaster-sigma15)](https://paperswithcode.com/sota/color-image-denoising-on-mcmaster-sigma15?p=stimulating-the-diffusion-model-for-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stimulating-the-diffusion-model-for-image/color-image-denoising-on-mcmaster-sigma25)](https://paperswithcode.com/sota/color-image-denoising-on-mcmaster-sigma25?p=stimulating-the-diffusion-model-for-image)
