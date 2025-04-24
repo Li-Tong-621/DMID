@@ -1,5 +1,5 @@
 # Stimulating Diffusion Model for Image Denoising via Adaptive Embedding and Ensembling
-[![arXiv](https://img.shields.io/badge/arxiv-paper-FF0000)](https://arxiv.org/abs/2307.03992)
+[![arXiv](https://img.shields.io/badge/arxiv-paper-fb595a)](https://arxiv.org/abs/2307.03992)
 [![TPAMI](https://img.shields.io/badge/TPAMI-paper-179bd3)](https://ieeexplore.ieee.org/document/10607932)
 [![知乎](https://img.shields.io/badge/知乎-讨论-0077CC)](https://zhuanlan.zhihu.com/p/1898420817429262557)
 [![知乎](https://img.shields.io/badge/知乎-讨论-0077CC)](https://zhuanlan.zhihu.com/p/639911080)
